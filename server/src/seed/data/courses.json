@@ -1,0 +1,381 @@
+[
+  {
+    "courseId": "3a9f3d6c-c391-4b1c-9c3d-6c3f3d6c3f3d",
+    "teacherId": "user_7kFh92JkCpQw3N8M5L4xRzVtYs",
+    "teacherName": "John Doe",
+    "title": "Introdução à Programação",
+    "description": "Aprenda o básico de programação com este curso abrangente.",
+    "category": "Ciência da Computação",
+    "image": "https://images.pexels.com/photos/5905888/pexels-photo-5905888.jpeg",
+    "price": 4999,
+    "level": "Iniciante",
+    "status": "Publicado",
+    "enrollments": [
+      { "userId": "user_2ntu96pUCljUV2T9W0AThzjacQB" },
+      { "userId": "user_9xWp45MnKjL8vRt2Hs6BqDcEy" }
+    ],
+    "sections": [
+      {
+        "sectionId": "2f9d1e8b-5a3c-4b7f-9e6d-8c2a1f0b3d5e",
+        "sectionTitle": "Começando",
+        "sectionDescription": "Aprenda o básico de programação e configure seu ambiente de desenvolvimento.",
+        "chapters": [
+          {
+            "chapterId": "a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6",
+            "type": "Vídeo",
+            "title": "Bem-vindo à Programação",
+            "content": "https://example.com/videos/welcome.mp4",
+            "video": "https://example.com/videos/welcome.mp4",
+            "comments": [
+              {
+                "commentId": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+                "userId": "emma.wilson@hotmail.com",
+                "text": "Ótima introdução!",
+                "timestamp": "2023-03-10T09:15:00Z"
+              }
+            ]
+          },
+          {
+            "chapterId": "b2c3d4e5-f6g7-h8i9-j0k1-l2m3n4o5p6q7",
+            "type": "Texto",
+            "title": "O que é Programação?",
+            "content": "Programação é o processo de criar instruções para que os computadores sigam...",
+            "comments": []
+          },
+          {
+            "chapterId": "c3d4e5f6-g7h8-i9j0-k1l2-m3n4o5p6q7r8",
+            "type": "Quiz",
+            "title": "Quiz de Noções Básicas de Programação",
+            "content": "1. O que é uma variável?\n2. Qual a diferença entre um compilador e um interpretador?\n3. Cite três linguagens de programação populares.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "sectionId": "3g0e2f9c-6d4e-5a7f-8b9g-1h2i3j4k5l6m",
+        "sectionTitle": "Conceitos Básicos de Programação",
+        "sectionDescription": "Explore conceitos fundamentais de programação e tipos de dados.",
+        "chapters": [
+          {
+            "chapterId": "d4e5f6g7-h8i9-j0k1-l2m3-n4o5p6q7r8s9",
+            "type": "Vídeo",
+            "title": "Variáveis e Tipos de Dados",
+            "content": "https://example.com/videos/variables-data-types.mp4",
+            "video": "https://example.com/videos/variables-data-types.mp4",
+            "comments": []
+          },
+          {
+            "chapterId": "e5f6g7h8-i9j0-k1l2-m3n4-o5p6q7r8s9t0",
+            "type": "Texto",
+            "title": "Estruturas de Controle",
+            "content": "Estruturas de controle são elementos fundamentais na programação que permitem controlar o fluxo do seu programa...",
+            "comments": []
+          },
+          {
+            "chapterId": "f6g7h8i9-j0k1-l2m3-n4o5-p6q7r8s9t0u1",
+            "type": "Quiz",
+            "title": "Quiz de Estruturas de Controle",
+            "content": "1. O que é uma instrução if-else?\n2. Explique o propósito de um loop.\n3. O que é uma instrução switch?",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "sectionId": "4h1f3g0d-7e5f-6b8g-9c0h-2i3j4k5l6m7n",
+        "sectionTitle": "Funções e Módulos",
+        "sectionDescription": "Aprenda a organizar seu código usando funções e módulos.",
+        "chapters": [
+          {
+            "chapterId": "g7h8i9j0-k1l2-m3n4-o5p6-q7r8s9t0u1v2",
+            "type": "Vídeo",
+            "title": "Introdução a Funções",
+            "content": "https://example.com/videos/intro-to-functions.mp4",
+            "video": "https://example.com/videos/intro-to-functions.mp4",
+            "comments": []
+          },
+          {
+            "chapterId": "h8i9j0k1-l2m3-n4o5-p6q7-r8s9t0u1v2w3",
+            "type": "Texto",
+            "title": "Criando e Usando Módulos",
+            "content": "Módulos são uma forma de organizar e reutilizar código em diferentes partes do seu programa...",
+            "comments": []
+          },
+          {
+            "chapterId": "i9j0k1l2-m3n4-o5p6-q7r8-s9t0u1v2w3x4",
+            "type": "Quiz",
+            "title": "Quiz de Funções e Módulos",
+            "content": "1. Qual a diferença entre uma função e um método?\n2. Como você importa um módulo em Python?\n3. Qual é o propósito da instrução 'return' em uma função?",
+            "comments": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseId": "8b4f7d9c-4b1c-4b1c-8b4f-7d9c8b4f7d9c",
+    "teacherId": "user_4mNj68RtPvXw2Ky9Qc7HbSdAf",
+    "teacherName": "Alice Johnson",
+    "title": "Aprendizado de Máquina Avançado",
+    "description": "Aprofunde-se em algoritmos e técnicas de aprendizado de máquina.",
+    "category": "Inteligência Artificial",
+    "image": "https://images.pexels.com/photos/6303596/pexels-photo-6303596.jpeg",
+    "price": 9999,
+    "level": "Avançado",
+    "status": "Publicado",
+    "enrollments": [
+      { "userId": "user_2ntu96pUCljUV2T9W0AThzjacQB" },
+      { "userId": "user_5vBn23WsLkMp7Jh4Gt8FxYcRz" }
+    ],
+    "sections": [
+      {
+        "sectionId": "1a7b3c5d-9e2f-4g6h-8i0j-2k4l6m8n0p1q",
+        "sectionTitle": "Redes Neurais",
+        "sectionDescription": "Aprenda sobre redes neurais e suas aplicações.",
+        "chapters": [
+          {
+            "chapterId": "c3d4e5f6-g7h8-i9j0-k1l2-m3n4o5p6q7r8",
+            "type": "Vídeo",
+            "title": "Introdução a Redes Neurais",
+            "content": "https://example.com/videos/neural-networks-intro.mp4",
+            "videoLength": 1200,
+            "comments": [],
+            "videoUrl": "https://example.com/videos/neural-networks-intro.mp4",
+            "videoUniqueId": "vid_004",
+            "videoType": "hls"
+          },
+          {
+            "chapterId": "d4e5f6g7-h8i9-j0k1-l2m3-n4o5p6q7r8s9",
+            "type": "Quiz",
+            "title": "Quiz de Redes Neurais",
+            "content": "1. O que é um neurônio?\n2. Explique o backpropagation.\n3. O que é uma função de ativação?",
+            "comments": []
+          },
+          {
+            "chapterId": "e5f6g7h8-i9j0-k1l2-m3n4-o5p6q7r8s9t0",
+            "type": "Texto",
+            "title": "Tipos de Redes Neurais",
+            "content": "Existem vários tipos de redes neurais, cada uma projetada para tarefas específicas...",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "sectionId": "2b8c4d6e-0f3g-5h7i-9j1k-3l5m7n9p1q3r",
+        "sectionTitle": "Aprendizado Profundo",
+        "sectionDescription": "Explore técnicas e arquiteturas avançadas de aprendizado profundo.",
+        "chapters": [
+          {
+            "chapterId": "f6g7h8i9-j0k1-l2m3-n4o5-p6q7r8s9t0u1",
+            "type": "Vídeo",
+            "title": "Redes Neurais Convolucionais",
+            "content": "https://example.com/videos/cnn-explained.mp4",
+            "videoLength": 1500,
+            "comments": [],
+            "videoUrl": "https://example.com/videos/cnn-explained.mp4",
+            "videoUniqueId": "vid_005",
+            "videoType": "dash"
+          },
+          {
+            "chapterId": "g7h8i9j0-k1l2-m3n4-o5p6-q7r8s9t0u1v2",
+            "type": "Texto",
+            "title": "Redes Neurais Recorrentes",
+            "content": "Redes Neurais Recorrentes (RNNs) são uma classe de redes neurais projetadas para trabalhar com dados sequenciais...",
+            "comments": []
+          },
+          {
+            "chapterId": "h8i9j0k1-l2m3-n4o5-p6q7-r8s9t0u1v2w3",
+            "type": "Quiz",
+            "title": "Quiz de Arquiteturas de Aprendizado Profundo",
+            "content": "1. Qual é a principal vantagem das CNNs?\n2. Explique o problema do gradiente que desaparece em RNNs.\n3. O que é transferência de aprendizado?",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "sectionId": "3c9d5e7f-1g4h-6i8j-0k2l-4m6n8p0q2r4s",
+        "sectionTitle": "Algoritmos Avançados de ML",
+        "sectionDescription": "Estude algoritmos de aprendizado de máquina de ponta e suas implementações.",
+        "chapters": [
+          {
+            "chapterId": "i9j0k1l2-m3n4-o5p6-q7r8-s9t0u1v2w3x4",
+            "type": "Vídeo",
+            "title": "Redes Generativas Adversariais",
+            "content": "https://example.com/videos/gan-explained.mp4",
+            "videoLength": 1800,
+            "comments": [],
+            "videoUrl": "https://example.com/videos/gan-explained.mp4",
+            "videoUniqueId": "vid_006",
+            "videoType": "mp4"
+          },
+          {
+            "chapterId": "j0k1l2m3-n4o5-p6q7-r8s9-t0u1v2w3x4y5",
+            "type": "Texto",
+            "title": "Aprendizado por Reforço",
+            "content": "Aprendizado por Reforço é um tipo de aprendizado de máquina onde um agente aprende a tomar decisões interagindo com um ambiente...",
+            "comments": []
+          },
+          {
+            "chapterId": "k1l2m3n4-o5p6-q7r8-s9t0-u1v2w3x4y5z6",
+            "type": "Quiz",
+            "title": "Quiz de Algoritmos Avançados de ML",
+            "content": "1. Quais são os componentes de um GAN?\n2. Explique a diferença entre Q-learning e policy gradients.\n3. Qual é o propósito do discriminador em um GAN?",
+            "comments": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseId": "c5d6e7f8-g9h0-i1j2-k3l4-m5n6o7p8q9r0",
+    "teacherId": "user_7kFh92JkCpQw3N8M5L4xRzVtYs",
+    "teacherName": "John Doe",
+    "title": "Desenvolvimento Web Fundamental",
+    "description": "Aprenda o básico de HTML, CSS e JavaScript para construir sites modernos.",
+    "category": "Desenvolvimento Web",
+    "image": "https://images.pexels.com/photos/6001397/pexels-photo-6001397.jpeg",
+    "price": 7999,
+    "level": "Iniciante",
+    "status": "Publicado",
+    "enrollments": [
+      { "userId": "user_6tHm89QwNpKj3Fx5Vy2RdLcBs" },
+      { "userId": "user_9xWp45MnKjL8vRt2Hs6BqDcEy" }
+    ],
+    "sections": [
+      {
+        "sectionId": "3e5f7g9h-1i3j-5k7l-9m1n-3o5p7q9r1s3t",
+        "sectionTitle": "Noções Básicas de HTML",
+        "sectionDescription": "Aprenda os fundamentos do HTML.",
+        "chapters": [
+          {
+            "chapterId": "e5f6g7h8-i9j0-k1l2-m3n4-o5p6q7r8s9t0",
+            "type": "Vídeo",
+            "title": "Introdução ao HTML",
+            "content": "https://example.com/videos/intro-to-html.mp4",
+            "video": "https://example.com/videos/intro-to-html.mp4",
+            "comments": []
+          },
+          {
+            "chapterId": "f6g7h8i9-j0k1-l2m3-n4o5-p6q7r8s9t0u1",
+            "type": "Quiz",
+            "title": "Quiz de Tags HTML",
+            "content": "1. O que significa HTML?\n2. Cite três tags HTML básicas.\n3. Qual é o propósito da tag <head>?",
+            "comments": []
+          },
+          {
+            "chapterId": "g7h8i9j0-k1l2-m3n4-o5p6-q7r8s9t0u1v2",
+            "type": "Texto",
+            "title": "Formulários e Elementos de Entrada em HTML",
+            "content": "Formulários HTML são usados para coletar a entrada do usuário. Aprenda sobre vários tipos de entrada e elementos de formulário...",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "sectionId": "4f6g8h0i-2j4k-6l8m-0n2p-4q6r8s0t2u4v",
+        "sectionTitle": "Estilização com CSS",
+        "sectionDescription": "Aprenda a estilizar seu HTML com CSS.",
+        "chapters": [
+          {
+            "chapterId": "h8i9j0k1-l2m3-n4o5-p6q7-r8s9t0u1v2w3",
+            "type": "Vídeo",
+            "title": "Noções Básicas de CSS",
+            "content": "https://example.com/videos/css-basics.mp4",
+            "video": "https://example.com/videos/css-basics.mp4",
+            "comments": []
+          },
+          {
+            "chapterId": "i9j0k1l2-m3n4-o5p6-q7r8-s9t0u1v2w3x4",
+            "type": "Texto",
+            "title": "Técnicas de Layout em CSS",
+            "content": "Aprenda sobre diferentes técnicas de layout em CSS, incluindo Flexbox e Grid...",
+            "comments": []
+          },
+          {
+            "chapterId": "j0k1l2m3-n4o5-p6q7-r8s9-t0u1v2w3x4y5",
+            "type": "Quiz",
+            "title": "Quiz de Estilização com CSS",
+            "content": "1. O que é o modelo de caixa em CSS?\n2. Explique a diferença entre elementos inline e block.\n3. Como centralizar um elemento horizontal e verticalmente usando Flexbox?",
+            "comments": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseId": "d4e5f6g7-h8i9-j0k1-l2m3-n4o5p6q7r8s9",
+    "teacherId": "user_3rTg67LmZnXc4Vb8Wd0JyUhEq",
+    "teacherName": "Michael Brown",
+    "title": "Fundamentos de Ciência de Dados",
+    "description": "Aprenda o básico de ciência de dados, incluindo estatísticas, visualização de dados e aprendizado de máquina.",
+    "category": "Ciência de Dados",
+    "image": "https://images.pexels.com/photos/4491461/pexels-photo-4491461.jpeg",
+    "price": 8999,
+    "level": "Intermediário",
+    "status": "Publicado",
+    "enrollments": [
+      { "userId": "user_6tHm89QwNpKj3Fx5Vy2RdLcBs" },
+      { "userId": "user_9xWp45MnKjL8vRt2Hs6BqDcEy" }
+    ],
+    "sections": [
+      {
+        "sectionId": "4u6v8w0x-2y4z-6a8b-0c2d-4e6f8g0h2i4j",
+        "sectionTitle": "Introdução à Ciência de Dados",
+        "sectionDescription": "Aprenda o básico de ciência de dados e suas aplicações.",
+        "chapters": [
+          {
+            "chapterId": "g7h8i9j0-k1l2-m3n4-o5p6-q7r8s9t0u1v2",
+            "type": "Vídeo",
+            "title": "O que é Ciência de Dados?",
+            "content": "https://example.com/videos/what-is-data-science.mp4",
+            "video": "https://example.com/videos/what-is-data-science.mp4",
+            "comments": []
+          },
+          {
+            "chapterId": "h8i9j0k1-l2m3-n4o5-p6q7-r8s9t0u1v2w3",
+            "type": "Quiz",
+            "title": "Quiz de Noções Básicas de Ciência de Dados",
+            "content": "1. Defina ciência de dados.\n2. Quais são os principais componentes da ciência de dados?\n3. Como o aprendizado de máquina se relaciona com a ciência de dados?",
+            "comments": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseId": "e5f6g7h8-i9j0-k1l2-m3n4-o5p6q7r8s9t0",
+    "teacherId": "user_7kFh92JkCpQw3N8M5L4xRzVtYs",
+    "teacherName": "John Doe",
+    "title": "Desenvolvimento de Aplicativos Móveis com React Native",
+    "description": "Construa aplicativos móveis multiplataforma usando React Native e JavaScript.",
+    "category": "Desenvolvimento Mobile",
+    "image": "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg",
+    "price": 12999,
+    "level": "Avançado",
+    "status": "Publicado",
+    "enrollments": [{ "userId": "user_6tHm89QwNpKj3Fx5Vy2RdLcBs" }],
+    "sections": [
+      {
+        "sectionId": "5k7l9m1n-3o5p-7q9r-1s3t-5u7v9w1x3y5z",
+        "sectionTitle": "Começando com React Native",
+        "sectionDescription": "Aprenda os conceitos básicos de desenvolvimento com React Native.",
+        "chapters": [
+          {
+            "chapterId": "i9j0k1l2-m3n4-o5p6-q7r8-s9t0u1v2w3x4",
+            "type": "Vídeo",
+            "title": "Configurando Seu Ambiente de Desenvolvimento",
+            "content": "https://example.com/videos/react-native-setup.mp4",
+            "video": "https://example.com/videos/react-native-setup.mp4",
+            "comments": []
+          },
+          {
+            "chapterId": "j0k1l2m3-n4o5-p6q7-r8s9-t0u1v2w3x4y5",
+            "type": "Texto",
+            "title": "Noções Básicas de React Native",
+            "content": "Aprenda sobre funções, objetos e outros conceitos fundamentais em JavaScript...",
+            "comments": []
+          }
+        ]
+      }
+    ]
+  }
+]
