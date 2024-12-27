@@ -6,6 +6,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useCarousel } from '@/hooks/useCarousel';
 import { Skeleton } from '@/components/ui/skeleton';
+import { useGetCoursesQuery } from '@/state/api';
+import { useRouter } from 'next/navigation';
+import CourseCardSearch from '@/components/CourseCard';
+import { useUser } from '@clerk/nextjs';
 
 const LoadingSkeleton = () => {
     return (
@@ -39,12 +43,25 @@ const LoadingSkeleton = () => {
 
 const Landing = () => {
 
+  const router = useRouter();
+
+  const handleCourseClick = (courseId: string) => {
+    router.push(`/search?id=${courseId}`);
+  };
+
+  const { data: courses, isLoading, isError } = useGetCoursesQuery({})
+  console.log(courses)
+
   const currentImage = useCarousel({totalImages: 3})
+
+  if (isLoading) {
+    return <LoadingSkeleton />;
+  }
 
   return (
     <motion.div 
-        initial={{ opacity: 0}} 
-        animate={{ opacity: 1}} 
+        initial={{ opacity: 0 }} 
+        animate={{ opacity: 1 }} 
         transition={{ duration: 0.5}} 
         className="w-3/4"
     >
@@ -116,7 +133,22 @@ const Landing = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {/* CURSOS VINDOS DO BACKEND */}
+                {courses &&
+                    courses.slice(0, 4).map((course, index) => (
+                        <motion.div
+                            key={course.courseId}
+                            initial={{y: 50, opacity: 0}}
+                            whileInView={{ y: 0, opacity: 1}}
+                            transition={{ duration: 0.5, delay: index * 0.2 }}
+                            viewport={{ amount: 0.4 }}
+                        >
+                            <CourseCardSearch 
+                                course={course} 
+                                onClick={() => handleCourseClick(course.courseId)}
+                            />
+                        </motion.div>
+                    ))
+                }
             </div>
         </motion.div>
     </motion.div>
