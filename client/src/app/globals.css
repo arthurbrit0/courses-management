@@ -365,24 +365,9 @@ input[type="color"] {
 }
 
 /* Dashboard Layout */
-.dashboard {
-  @apply min-h-screen w-full bg-customgreys-primarybg flex;
-}
-
-.dashboard__content {
-  @apply flex flex-1 overflow-hidden;
-}
-
-.dashboard__main {
-  @apply flex-grow min-h-screen transition-all duration-500 ease-in-out overflow-y-auto bg-customgreys-secondarybg;
-}
 
 .dashboard__main--not-course {
   @apply bg-customgreys-primarybg;
-}
-
-.dashboard__body {
-  @apply px-8 py-4;
 }
 
 /* Course Page */
@@ -1081,59 +1066,6 @@ input[type="color"] {
 
 .add-chapter-button__text {
   @apply text-primary-700;
-}
-
-/* AppSidebar */
-.app-sidebar__menu {
-  @apply mt-5 group-data-[collapsible=icon]:mt-7;
-}
-
-.app-sidebar__logo-container {
-  @apply flex justify-between items-center gap-5 pl-3 pr-1 h-10 w-full group-data-[collapsible=icon]:ml-1 group-data-[collapsible=icon]:w-10 group-data-[collapsible=icon]:px-0;
-}
-
-.app-sidebar__logo-wrapper {
-  @apply flex items-center gap-5;
-}
-
-.app-sidebar__logo {
-  @apply transition duration-200 group-data-[collapsible=icon]:group-hover:brightness-75 w-auto;
-}
-
-.app-sidebar__title {
-  @apply text-lg font-extrabold group-data-[collapsible=icon]:hidden;
-}
-
-.app-sidebar__collapse-icon {
-  @apply text-gray-400 w-5 h-5 group-data-[collapsible=icon]:hidden;
-}
-
-.app-sidebar__nav-menu {
-  @apply mt-7 gap-0;
-}
-
-.app-sidebar__nav-item {
-  @apply group-data-[collapsible=icon]:flex group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:py-4 hover:bg-customgreys-secondarybg;
-}
-
-.app-sidebar__nav-button {
-  @apply gap-4 p-8 hover:bg-customgreys-secondarybg group-data-[collapsible=icon]:flex group-data-[collapsible=icon]:justify-center;
-}
-
-.app-sidebar__nav-link {
-  @apply relative flex items-center;
-}
-
-.app-sidebar__nav-text {
-  @apply font-medium text-md ml-4 group-data-[collapsible=icon]:hidden;
-}
-
-.app-sidebar__active-indicator {
-  @apply absolute right-0 top-0 h-full w-[4px] bg-primary-750;
-}
-
-.app-sidebar__signout {
-  @apply text-primary-700 pl-8;
 }
 
 /* Add this class for group hover effect */
