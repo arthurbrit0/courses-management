@@ -1016,19 +1016,6 @@ input[type="color"] {
   @apply !mt-8 text-gray-100 bg-primary-700 hover:bg-primary-600;
 }
 
-/* Header */
-.header {
-  @apply mb-7 flex justify-between items-center;
-}
-
-.header__title {
-  @apply text-3xl font-bold text-white-50;
-}
-
-.header__subtitle {
-  @apply text-sm text-gray-500 mt-1;
-}
-
 /* Course Card Teacher Additional Classes */
 .course-card-teacher__content {
   @apply w-full pb-6 pt-4 flex-grow flex flex-col justify-between text-gray-400;
@@ -1147,15 +1134,6 @@ input[type="color"] {
 
 .app-sidebar__signout {
   @apply text-primary-700 pl-8;
-}
-
-/* Auth Layout */
-.auth-layout {
-  @apply h-full w-full bg-customgreys-primarybg;
-}
-
-.auth-layout__main {
-  @apply w-full flex h-full justify-center items-center;
 }
 
 /* Add this class for group hover effect */
