@@ -25,7 +25,9 @@ export default function RootLayout({
         className={`${dmSans.className}`}
       >
         <Providers>
-          {children}
+          <div className="mx-auto w-full h-full justify-center items-center">
+            {children}
+          </div>
         </Providers>
       </body>
     </html>
