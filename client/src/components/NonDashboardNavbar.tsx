@@ -1,8 +1,16 @@
+"use client";
+
+import { SignedIn, SignedOut, UserButton, useUser } from '@clerk/nextjs'
+import { dark } from '@clerk/themes'
 import { Bell, BookOpen } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
 const NonDashboardNavbar = () => {
+
+  const { user } = useUser();
+  const userRole = user?.publicMetadata?.userType as "student" | "teacher";
+
   return (
     <nav className="w-full flex justify-center bg-customgreys-primarybg">
         <div className="flex justify-between items-center w-3/4 py-8">
@@ -35,7 +43,30 @@ const NonDashboardNavbar = () => {
                     <Bell className="text-gray-400 w-4 h-4 sm:w-5 sm:h-5" size={24} />
                 </button>
 
-                {/* BOTÕES PARA AUTENTICAÇÃO */}
+                <SignedIn>
+                    <UserButton 
+                        appearance={{
+                            baseTheme: dark,
+                            elements: {
+                                userButtonOuterIdentifier: "text-customgreys-dirtyGrey",
+                                userButtonBox: "scale-90 sm:scale-100"
+                            }
+                        }}
+                        showName={true}
+                        userProfileMode="navigation"
+                        userProfileUrl={
+                            userRole === "teacher" ? "/teacher/profile" : "/user/profile"
+                        }
+                    />
+                </SignedIn>
+                <SignedOut>
+                    <Link href="/signin" className="bg-customgreys-secondarybg px-4 py-2 rounded-md text-customgreys-dirtyGrey hover:text-white-50 hover:bg-customgreys-darkerGrey transition-all duration-300 text-sm sm:text-base">
+                        Entrar
+                    </Link>
+                    <Link href="/signup" className="bg-primary-700 px-4 py-2 rounded-md text-white-50 hover:bg-primary-600 transition-all duration-300 text-sm sm:text-base">
+                        Registrar
+                    </Link>
+                </SignedOut>
             </div>
         </div>
     </nav>
