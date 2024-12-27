@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="bg-customgreys-secondarybg bottom-0 w-full py-8 mt-10 text-center text-sm">
         <p>&copy; 2024 - arthur brito. todos os direitos reservados.</p>
         <div className="mt-2">
-            {["Sobre", "Privacidade", "Termos",  "Contato"].map((item) => (
+            {["Sobre", "Privacidade", "Termos", "Contato"].map((item) => (
                 <Link 
                     key={item} 
                     href={`/${item.toLowerCase().replace(" ", "-")}`}
