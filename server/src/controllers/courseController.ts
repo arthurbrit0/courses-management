@@ -30,10 +30,10 @@ export const getCourse = async (
     res: Response
 ): Promise<void> => {
 
-    const { id } = req.params;                                        // Pegando o id da requisição
+    const { courseId } = req.params;                                  // Pegando o id da requisição
 
     try {
-        const course = await Course.get(id);                          // Pegando o curso pelo id
+        const course = await Course.get(courseId);                    // Pegando o curso pelo id
 
         if (!course) {                                                // Se não encontrarmos o curso pelo id
             res.status(404).json({
