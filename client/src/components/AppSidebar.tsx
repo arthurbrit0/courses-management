@@ -45,7 +45,7 @@ const AppSidebar = () => {
         <SidebarHeader>
             <SidebarMenu className="mt-5 group-data-[collapsible=icon]:mt-7">
                 <SidebarMenuItem>
-                    <SidebarMenuButton size="lg" onClick={() => toggleSidebar} className="group hover:bg-customgreys-secondarybg">
+                    <SidebarMenuButton size="lg" onClick={toggleSidebar} className="group hover:bg-customgreys-secondarybg">
                         <div className="flex justify-between items-center gap-5 pl-3 pr-1 h-10 w-full group-data-[collapsible=icon]:ml-1 group-data-[collapsible=icon]:w-10 group-data-[collapsible=icon]:px-0 group">
                             <div className="flex items-center gap-5">
                                 <Image src="/logo.svg" alt ="Logo" width={25} height={20} className="transition duration-200 group-data-[collapsible=icon]:group-hover:brightness-75 w-auto" />
