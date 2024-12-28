@@ -5,6 +5,8 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import * as dynamoose from "dynamoose";
+import { createClerkClient } from "@clerk/express";
+import userClerkRoutes from "./routes/userClerkRoutes";
 
 /* Importação de rotas */
 
@@ -17,6 +19,10 @@ const isProduction = process.env.NODE_ENV === "production";              // Veri
 if (!isProduction) {
     dynamoose.aws.ddb.local();                                           // Configurando o DynamoDB local se não estivermos na AWS (produção)                                  
 }
+
+export const clerkClient = createClerkClient({
+    secretKey: process.env.CLERK_SECRET_KEY
+})
 
 const app = express();
 
@@ -35,6 +41,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/courses", courseRoutes);                                       // Configurando a rota de cursos
+app.use("/users/clerk", userClerkRoutes);
 
 /* Server */
 
