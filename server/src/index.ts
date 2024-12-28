@@ -5,7 +5,7 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import * as dynamoose from "dynamoose";
-import { createClerkClient } from "@clerk/express";
+import { clerkMiddleware, createClerkClient, requireAuth } from "@clerk/express";
 import userClerkRoutes from "./routes/userClerkRoutes";
 
 /* Importação de rotas */
@@ -33,6 +33,8 @@ app.use(morgan("common"));                                               // Conf
 app.use(bodyParser.json());                                              // Configurando o Body Parser para requisições com JSON
 app.use(bodyParser.urlencoded({ extended: false }));                     // Configurando o Body Parser para requisições com URL Encoded
 app.use(cors());                                                         // Configurando o CORS para permitir requisições de outros domínios
+app.use(clerkMiddleware());
+
 
 /* Rotas */
 
@@ -41,7 +43,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/courses", courseRoutes);                                       // Configurando a rota de cursos
-app.use("/users/clerk", userClerkRoutes);
+app.use("/users/clerk", requireAuth(), userClerkRoutes);
 
 /* Server */
 
