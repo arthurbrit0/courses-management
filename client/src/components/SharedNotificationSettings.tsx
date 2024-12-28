@@ -55,11 +55,11 @@ const SharedNotificationSettings = ({
   if (!user) return <div>Por favor, faça login para atualizar suas configurações!</div>
 
   return (
-    <div className="notification-settings">
+    <div className="space-y-4">
         <Header title={title} subtitle={subtitle} />
         <Form {...methods}>
-            <form onSubmit={methods.handleSubmit(onSubmit)} className="notification-settings__form">
-                <div className="notification-settings__fields">
+            <form onSubmit={methods.handleSubmit(onSubmit)} className="space-y-4">
+                <div className="space-y-6">
                     <CustomFormField name="courseNotifications" label="Notificações de curso" type="switch" />
                     <CustomFormField name="emailAlerts" label="Alertas de e-mail" type="switch" />
                     <CustomFormField name="smsAlerts" label="Alertas de SMS" type="switch" />
@@ -70,7 +70,7 @@ const SharedNotificationSettings = ({
                     ]} />
                 </div>
 
-                <Button type="submit" className="notification-settings__submit">
+                <Button type="submit" className="!mt-8 text-gray-100 bg-primary-700 hover:bg-primary-600">
                     Salvar configurações
                 </Button>
             </form>

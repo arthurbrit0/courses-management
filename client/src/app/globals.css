@@ -984,23 +984,6 @@ input[type="color"] {
   @apply bg-customgreys-darkerGrey text-white-50;
 }
 
-/* Shared Notification Settings */
-.notification-settings {
-  @apply space-y-4;
-}
-
-.notification-settings__form {
-  @apply space-y-4;
-}
-
-.notification-settings__fields {
-  @apply space-y-6;
-}
-
-.notification-settings__submit {
-  @apply !mt-8 text-gray-100 bg-primary-700 hover:bg-primary-600;
-}
-
 /* Course Card Teacher Additional Classes */
 .course-card-teacher__content {
   @apply w-full pb-6 pt-4 flex-grow flex flex-col justify-between text-gray-400;
