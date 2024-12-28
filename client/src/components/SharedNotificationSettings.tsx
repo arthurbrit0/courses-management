@@ -9,7 +9,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import Header from './Header';
 import { Form } from '@/components/ui/form';
 import { CustomFormField } from './CustomFormField';
-import { Button } from '@components/ui/button';
+import { Button } from '@/components/ui/button';
 
 const SharedNotificationSettings = ({
     title="Configurações de notificação",
