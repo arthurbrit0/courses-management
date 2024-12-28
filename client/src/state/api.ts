@@ -23,10 +23,18 @@ const customBaseQuery = async (
 export const api = createApi({                                                      // cria uma instância da api slice que gerenciará as requisicoes para a api
   baseQuery: customBaseQuery,                                                       // define a base url da api
   reducerPath: "api",                                                               // define o caminho no estado global do redux, onde a api slice será armazenada                   
-  tagTypes: ["Courses"],                                                            // define os tipos de tags que a api slice usa para gerenciar cache
+  tagTypes: ["Courses", "Users"],                                                   // define os tipos de tags que a api slice usa para gerenciar cache
 
   endpoints: (build) => ({
 
+    updateUser: build.mutation<User, Partial<User> & { userId: string}>({
+      query: ({ userId, ...updatedUser}) => ({
+        url: `users/clerk/${userId}`,
+        method: "PUT",
+        body: updatedUser, 
+      }),
+      invalidatesTags: ["Users"]
+    }),
     getCourses: build.query<Course[], { category?: string }>({                      // define um endpoint para buscar cursos, que recebe um parametro opcional category e retorna uma lista de cursos     
       query: ({ category }) => ({                                                   // recebe os parâmetros da consulta
         url: "courses",                                                             // define a url da consulta
@@ -44,6 +52,7 @@ export const api = createApi({                                                  
 });
 
 export const {
+  useUpdateUserMutation,
   useGetCoursesQuery,
   useGetCourseQuery
 } = api;
