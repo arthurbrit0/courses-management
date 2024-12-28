@@ -35,6 +35,7 @@ export default function DashboardLayout({ children }: {children: React.ReactNode
                 )}
                 style={{ height: "100vh" }}
                 >
+                    <Navbar />
                     <main className="px-8 py-4">
                         {children}
                     </main>
