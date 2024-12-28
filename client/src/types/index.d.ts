@@ -59,8 +59,9 @@ declare global {
     courseId: string;
     paymentProvider: "stripe";
     paymentMethodId?: string;
-    amount: number; // Stored in cents
+    amount: number; 
     savePaymentMethod?: boolean;
+    lastAccessedTimestamp: string;
   }
 
   interface DateRange {

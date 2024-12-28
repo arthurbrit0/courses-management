@@ -75,7 +75,7 @@ const Search = () => {
             >
                 <SelectedCourse
                     course={selectedCourse}
-                    onEnrollNow={handleEnrollNow}
+                    handleEnrollNow={handleEnrollNow}
                 />
             </motion.div>
         )}

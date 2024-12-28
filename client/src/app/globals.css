@@ -140,17 +140,6 @@ input[type="color"] {
   @apply hover:!text-white-100;
 }
 
-/* Selected Course Component */
-
-/* Checkout Pages */
-.checkout {
-  @apply w-full px-4 h-full flex flex-col items-center py-12;
-}
-
-.checkout__content {
-  @apply w-full max-w-screen-lg flex flex-col items-center mt-10;
-}
-
 /* Completion Page */
 .completion {
   @apply flex flex-col h-full items-center justify-center bg-background text-foreground;
@@ -177,17 +166,6 @@ input[type="color"] {
 }
 
 /* Checkout Details Page */
-.checkout-details {
-  @apply w-full h-fit gap-10;
-}
-
-.checkout-details__container {
-  @apply sm:flex gap-10;
-}
-
-.checkout-details__preview {
-  @apply basis-1/2 rounded-lg;
-}
 
 .checkout-details__options {
   @apply basis-1/2 flex-1 h-auto flex flex-col gap-10;
@@ -227,67 +205,6 @@ input[type="color"] {
 
 .checkout-details__auth {
   @apply w-full bg-customgreys-secondarybg flex justify-center items-center rounded-lg;
-}
-
-/* Payment Page */
-.payment {
-  @apply flex flex-col w-full;
-}
-
-.payment__container {
-  @apply sm:flex gap-10 mb-6;
-}
-
-.payment__preview {
-  @apply basis-1/2 rounded-lg;
-}
-
-.payment__form-container {
-  @apply basis-1/2;
-}
-
-.payment__form {
-  @apply space-y-4;
-}
-
-.payment__content {
-  @apply flex flex-col gap-4 bg-customgreys-secondarybg px-10 py-10 rounded-lg;
-}
-
-.payment__title {
-  @apply text-2xl font-bold;
-}
-
-.payment__subtitle {
-  @apply text-sm text-gray-400;
-}
-
-.payment__method {
-  @apply flex flex-col gap-2 w-full mt-6;
-}
-
-.payment__method-title {
-  @apply text-md;
-}
-
-.payment__card-container {
-  @apply flex flex-col border-[2px] border-white-100/5 rounded-lg;
-}
-
-.payment__card-header {
-  @apply flex items-center gap-2 bg-white-50/5 py-2 px-2;
-}
-
-.payment__card-element {
-  @apply px-4 py-6;
-}
-
-.payment__actions {
-  @apply flex justify-between items-center w-full mt-6;
-}
-
-.payment__submit {
-  @apply hover:bg-primary-600 bg-primary-700;
 }
 
 /* Billing Page */
@@ -913,32 +830,9 @@ input[type="color"] {
 }
 
 /* Wizard Stepper */
-.wizard-stepper {
-  @apply w-1/2 mb-4 flex flex-col items-center;
-}
-
-.wizard-stepper__container {
-  @apply w-full flex items-center justify-between mb-2;
-}
 
 .wizard-stepper__step {
   @apply flex flex-col items-center;
-}
-
-.wizard-stepper__circle {
-  @apply w-8 h-8 flex items-center justify-center rounded-full mb-2;
-}
-
-.wizard-stepper__circle--completed {
-  @apply bg-green-500;
-}
-
-.wizard-stepper__circle--current {
-  @apply bg-primary-700;
-}
-
-.wizard-stepper__circle--upcoming {
-  @apply border border-customgreys-dirtyGrey text-customgreys-dirtyGrey;
 }
 
 .wizard-stepper__text {
