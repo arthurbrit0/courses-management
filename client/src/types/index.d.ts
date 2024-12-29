@@ -43,9 +43,9 @@ declare global {
     description?: string;
     category: string;
     image?: string;
-    price?: number; // Stored in cents (e.g., 4999 for $49.99)
-    level: "Beginner" | "Intermediate" | "Advanced";
-    status: "Draft" | "Published";
+    price?: number; 
+    level: "Iniciante" | "Intermediário" | "Avançado";
+    status: "Rascunho" | "Publicado";
     sections: Section[];
     enrollments?: Array<{
       userId: string;

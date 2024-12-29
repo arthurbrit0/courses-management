@@ -600,19 +600,6 @@ input[type="color"] {
   @apply flex justify-end space-x-2 mt-6;
 }
 
-/* Teacher Courses Page */
-.teacher-courses {
-  @apply w-full h-full;
-}
-
-.teacher-courses__header {
-  @apply bg-primary-700 hover:bg-primary-600;
-}
-
-.teacher-courses__grid {
-  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7 mt-6 w-full;
-}
-
 /* Course Card */
 .course-card {
   @apply flex flex-col w-full h-[340px] xl:h-[380px] border-none bg-customgreys-primarybg overflow-hidden cursor-pointer hover:bg-white-100/10 transition duration-200;
@@ -813,27 +800,6 @@ input[type="color"] {
   @apply bg-customgreys-darkerGrey text-white-50;
 }
 
-/* Course Card Teacher Additional Classes */
-.course-card-teacher__content {
-  @apply w-full pb-6 pt-4 flex-grow flex flex-col justify-between text-gray-400;
-}
-
-.course-card-teacher__title {
-  @apply text-primary-50 text-md md:text-lg line-clamp-2 overflow-hidden;
-}
-
-.course-card-teacher__category {
-  @apply bg-customgreys-dirtyGrey/50 px-2 py-1 mt-3 mb-3 rounded-xl w-fit text-sm;
-}
-
-.course-card-teacher__edit-button {
-  @apply rounded w-full bg-primary-700 border-none hover:bg-primary-600 hover:text-customgreys-primarybg text-white-100 cursor-pointer;
-}
-
-.course-card-teacher__delete-button {
-  @apply rounded w-full bg-red-600 text-white-100 hover:bg-red-400 hover:text-customgreys-primarybg cursor-pointer;
-}
-
 /* NonDashboard Navbar Additional Classes */
 .navbar__brand {
   @apply font-bold text-lg sm:text-xl hover:text-customgreys-dirtyGrey;
@@ -859,8 +825,6 @@ input[type="color"] {
 .dark-mode-button {
   @apply cursor-pointer text-customgreys-dirtyGrey w-5 h-5 sm:w-6 sm:h-6 hover:text-white-50;
 }
-
-/* Course Card Search Additional Classes */
 
 /* Additional Navbar Classes */
 .navbar__sidebar-trigger {

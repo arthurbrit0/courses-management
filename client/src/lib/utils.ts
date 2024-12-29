@@ -240,10 +240,10 @@ export function convertToSubCurrency(amount: number, factor = 100) {
 export const NAVBAR_HEIGHT = 48;
 
 export const courseCategories = [
-  { value: "technology", label: "Technology" },
-  { value: "science", label: "Science" },
-  { value: "mathematics", label: "Mathematics" },
-  { value: "artificial-intelligence", label: "Artificial Intelligence" },
+  { value: "technology", label: "Tecnologia" },
+  { value: "science", label: "Ciência" },
+  { value: "mathematics", label: "Matemática" },
+  { value: "artificial-intelligence", label: "Inteligência Artificial" },
 ] as const;
 
 export const customDataGridStyles = {
