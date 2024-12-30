@@ -70,5 +70,7 @@ export const handler = async (event: any, context: any) => {
             statusCode: 200,
             body: JSON.stringify({ message: "Seed realizado com sucesso!" }) // arrumar segurança
         }
+    } else {
+        return serverlessApp(event, context);
     }
 }
