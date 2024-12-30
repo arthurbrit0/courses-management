@@ -13,7 +13,7 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Plataforma de Cursos",
+  title: "BLU.edu",
   description: "Plataforma de gerenciamento de vídeos educativos",
 };
 

@@ -530,7 +530,6 @@ input[type="color"] {
   @apply p-1;
 }
 
-/* Chapter Modal */
 .chapter-modal {
   @apply flex flex-col;
 }
@@ -682,19 +681,6 @@ input[type="color"] {
 
 .course-preview__title {
   @apply text-white-50 text-3xl font-bold mb-2;
-}
-
-/* Custom Modal */
-.custom-modal__overlay {
-  @apply fixed inset-0 bg-black bg-opacity-50 z-40;
-}
-
-.custom-modal__content {
-  @apply fixed inset-y-0 right-0 w-full max-w-md bg-customgreys-secondarybg shadow-lg z-50 overflow-y-auto;
-}
-
-.custom-modal__inner {
-  @apply p-6;
 }
 
 /* Navbar */
