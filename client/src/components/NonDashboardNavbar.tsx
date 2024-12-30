@@ -16,7 +16,7 @@ const NonDashboardNavbar = () => {
         <div className="flex justify-between items-center w-3/4 py-8">
             <div className="flex justify-between items-center gap-14">
                 <Link href="/" className="font-bold text-lg sm:text-xl hover:text-customgreys-dirtyGrey transition-all duration-150">
-                    CURSOS
+                    BLU.edu
                 </Link>
                 <div className="flex items-center gap-4">
                     <div className="relative group">

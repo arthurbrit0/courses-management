@@ -7,7 +7,8 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
 import { useUser } from "@clerk/nextjs";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ChaptersSidebar from "./user/courses/[courseId]/ChaptersSidebar";
 
 export default function DashboardLayout({ children }: {children: React.ReactNode} ) {
 
@@ -15,7 +16,16 @@ export default function DashboardLayout({ children }: {children: React.ReactNode
   const [courseId, setCourseId] = useState<string | null>(null);
   const { user, isLoaded } = useUser();
 
-  // handle use effect isCoursePage
+  const isCoursePage = /^\/user\/courses\/[^\/]+(?:\/chapters\/[^\/]+)?$/.test(pathName);
+
+  useEffect(() => {
+    if (isCoursePage) {
+      const match = pathName.match(/\/user\/courses\/([^\/]+)/);
+      setCourseId(match? match[1] : null);
+    } else {
+      setCourseId(null)
+    }
+  }, [pathName, isCoursePage]);
 
   if (!isLoaded) {
     return <Loading />
@@ -29,13 +39,14 @@ export default function DashboardLayout({ children }: {children: React.ReactNode
         <div className="min-h-screen w-full bg-customgreys-primarybg flex">
             <AppSidebar />
             <div className="flex flex-1 overflow-hidden"> 
-                {/* Sidebar dos capítulos */}
+                { courseId && <ChaptersSidebar />}
                 <div className={cn(
                     "flex-grow min-h-screen transition-all duration-500 ease-in-out overflow-y-auto bg-customgreys-secondarybg",
+                    isCoursePage && "bg-customgreys-primarybg"
                 )}
                 style={{ height: "100vh" }}
                 >
-                    <Navbar />
+                    <Navbar isCoursePage={isCoursePage}  />
                     <main className="px-8 py-4">
                         {children}
                     </main>

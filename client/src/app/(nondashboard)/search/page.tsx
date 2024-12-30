@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react'
 import { useGetCoursesQuery } from '@/state/api';
 import { useRouter } from 'next/navigation';
 import Loading from '@/components/Loading';
-import CourseCardSearch from '@/components/CourseCard';
+import CourseCardSearch from '@/components/CourseCardSearch';
 import SelectedCourse from './SelectedCourse';
 
 const Search = () => {

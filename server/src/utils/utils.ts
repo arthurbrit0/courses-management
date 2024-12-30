@@ -8,12 +8,12 @@ export const updateCourseVideoInfo = (
 ) => {
   const section = course.sections?.find((s: any) => s.sectionId === sectionId);
   if (!section) {
-    throw new Error(`Section not found: ${sectionId}`);
+    throw new Error(`Seção não encontrada: ${sectionId}`);
   }
 
   const chapter = section.chapters?.find((c: any) => c.chapterId === chapterId);
   if (!chapter) {
-    throw new Error(`Chapter not found: ${chapterId}`);
+    throw new Error(`Capítulo não encontrado: ${chapterId}`);
   }
 
   chapter.video = videoUrl;
@@ -25,7 +25,7 @@ export const validateUploadedFiles = (files: any) => {
   for (const file of files) {
     const ext = path.extname(file.originalname).toLowerCase();
     if (!allowedExtensions.includes(ext)) {
-      throw new Error(`Unsupported file type: ${ext}`);
+      throw new Error(`Tipo de arquivo não suportado: ${ext}`);
     }
   }
 };
@@ -48,7 +48,6 @@ export const getContentType = (filename: string) => {
   }
 };
 
-// Preserved HLS/DASH upload logic for future use
 export const handleAdvancedVideoUpload = async (
   s3: any,
   files: any,
@@ -61,7 +60,6 @@ export const handleAdvancedVideoUpload = async (
   );
 
   if (isHLSOrDASH) {
-    // Handle HLS/MPEG-DASH Upload
     const uploadPromises = files.map((file: any) => {
       const s3Key = `videos/${uniqueId}/${file.originalname}`;
       return s3
@@ -75,7 +73,6 @@ export const handleAdvancedVideoUpload = async (
     });
     await Promise.all(uploadPromises);
 
-    // Determine manifest file URL
     const manifestFile = files.find(
       (file: any) =>
         file.originalname.endsWith(".m3u8") ||
@@ -90,7 +87,7 @@ export const handleAdvancedVideoUpload = async (
     };
   }
 
-  return null; // Return null if not HLS/DASH to handle regular upload
+  return null; 
 };
 
 export const mergeSections = (
@@ -105,10 +102,8 @@ export const mergeSections = (
   for (const newSection of newSections) {
     const section = existingSectionsMap.get(newSection.sectionId);
     if (!section) {
-      // Add new section
       existingSectionsMap.set(newSection.sectionId, newSection);
     } else {
-      // Merge chapters within the existing section
       section.chapters = mergeChapters(section.chapters, newSection.chapters);
       existingSectionsMap.set(newSection.sectionId, section);
     }

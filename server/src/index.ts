@@ -6,12 +6,13 @@ import helmet from "helmet";
 import morgan from "morgan";
 import * as dynamoose from "dynamoose";
 import { clerkMiddleware, createClerkClient, requireAuth } from "@clerk/express";
-import userClerkRoutes from "./routes/userClerkRoutes";
-import transactionRoutes from "./routes/transactionRoutes";
 
 /* Importação de rotas */
 
+import userClerkRoutes from "./routes/userClerkRoutes";
+import transactionRoutes from "./routes/transactionRoutes";
 import courseRoutes from "./routes/courseRoutes";
+import userCourseProgressRoutes from "./routes/userCourseProgressRoutes";
 
 /* Configurações */
 
@@ -46,6 +47,7 @@ app.get("/", (req, res) => {
 app.use("/courses", courseRoutes);                                       // Configurando a rota de cursos
 app.use("/users/clerk", requireAuth(), userClerkRoutes);
 app.use("/transactions", requireAuth(), transactionRoutes);
+app.use("/users/course-progress", requireAuth(), userCourseProgressRoutes);
 
 /* Server */
 

@@ -90,6 +90,7 @@ export const createCourse = async (
 
         res.status(201).json({
             message: "Curso criado com sucesso",
+            data: newCourse
         })
 
     } catch (error) {

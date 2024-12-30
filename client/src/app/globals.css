@@ -206,16 +206,6 @@ input[type="color"] {
 .checkout-details__auth {
   @apply w-full bg-customgreys-secondarybg flex justify-center items-center rounded-lg;
 }
-
-/* User Courses Page */
-.user-courses {
-  @apply w-full h-full;
-}
-
-.user-courses__grid {
-  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-7 mt-6 w-full;
-}
-
 /* Dashboard Layout */
 
 .dashboard__main--not-course {
@@ -252,7 +242,7 @@ input[type="color"] {
 }
 
 .course__instructor {
-  @apply relative mr-2 flex items-center gap-2;
+  @apply relative mr-2 flex items-center gap-2 text-white-100;
 }
 
 .course__avatar {
@@ -264,7 +254,7 @@ input[type="color"] {
 }
 
 .course__instructor-name {
-  @apply text-customgreys-dirtyGrey text-sm font-[500];
+  @apply text-white-100 text-sm font-[500];
 }
 
 .course__navigation {
@@ -316,7 +306,7 @@ input[type="color"] {
 }
 
 .course__tab-card {
-  @apply !border-none shadow-none;
+  @apply !border-none shadow-none bg-[#1B1C22] text-white-100;
 }
 
 .course__tab-header {
@@ -617,7 +607,7 @@ input[type="color"] {
 }
 
 .course-card__title {
-  @apply text-md lg:text-lg font-semibold line-clamp-2;
+  @apply text-white-50 text-md lg:text-lg font-semibold line-clamp-2;
 }
 
 .course-card__footer {

@@ -1,45 +1,54 @@
-import { formatPrice } from '@/lib/utils'
-import Image from 'next/image'
-import React from 'react'
-
-const CourseCardSearch = ({ course, isSelected, onClick }: SearchCourseCardProps) => {
-  return (
-    <div 
-      onClick={onClick} 
-      className={`bg-customgreys-secondarybg overflow-hidden rounded-lg
-                  hover:bg-white-100/10 transition duration-200 flex flex-col
-                  cursor-pointer border-2 h-full group 
-                  ${isSelected ? "border-primary-600" : "border-transparent" }`}>
-        <div className="relative w-auto pt-[56.25%]">
-          <Image 
-            src={course.image || "/placeholder.png"} 
-            alt={course.title} 
-            fill 
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover transition-transform"  
+import {
+    Card,
+    CardHeader,
+    CardContent,
+    CardTitle,
+    CardFooter,
+  } from "@/components/ui/card";
+  import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+  import Image from "next/image";
+  import { formatPrice } from "@/lib/utils";
+  
+  const CourseCard = ({ course, onGoToCourse }: CourseCardProps) => {
+    return (
+      <Card className="course-card group" onClick={() => onGoToCourse(course)}>
+        <CardHeader className="course-card__header">
+          <Image
+            src={course.image || "/placeholder.png"}
+            alt={course.title}
+            width={400}
+            height={350}
+            className="course-card__image"
+            priority
           />
-        </div>
-        <div className="p-4 flex flex-col justify-between flex-grow">
-          <div>
-            <h2 className="font-semibold line-clamp-1">{course.title}</h2>
-            <p className="text-sm mt-1 line-clamp-2">{course.description}</p>
-          </div>
-          <div className="mt-2">
-            <p className="text-customgreys-dirtyGrey text-sm">
-              Por {course.teacherName}
+        </CardHeader>
+        <CardContent className="course-card__content">
+          <CardTitle className="course-card__title">
+            {course.title}: {course.description}
+          </CardTitle>
+  
+          <div className="flex items-center gap-2">
+            <Avatar className="w-6 h-6">
+              <AvatarImage alt={course.teacherName} />
+              <AvatarFallback className="bg-secondary-700 text-black">
+                {course.teacherName[0]}
+              </AvatarFallback>
+            </Avatar>
+  
+            <p className="text-sm text-customgreys-dirtyGrey">
+              {course.teacherName}
             </p>
-            <div className="flex justify-between items-center mt-1">
-              <span className="text-primary-500 font-semibold">
-                {formatPrice(course.price)}
-              </span>
-              <span className="text-customgreys-dirtyGrey text-sm">
-                {course.enrollments?.length} alunos
-              </span>
-            </div>
           </div>
-        </div>
-    </div>
-  )
-}
-
-export default CourseCardSearch
+  
+          <CardFooter className="course-card__footer">
+            <div className="course-card__category">{course.category}</div>
+            <span className="course-card__price">
+              {formatPrice(course.price)}
+            </span>
+          </CardFooter>
+        </CardContent>
+      </Card>
+    );
+  };
+  
+  export default CourseCard;
