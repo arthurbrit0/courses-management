@@ -61,7 +61,7 @@ const TeacherCourseCard = ({
                                         onClick={() => onEdit(course)}
                                     >
                                         <Pencil className="w-4 h-4 mr-2" />
-                                        Editar curso
+                                        Editar
                                     </Button>
                                 </div>
                                 <div>
@@ -71,7 +71,7 @@ const TeacherCourseCard = ({
                                         onClick={() => onDelete(course)}
                                     >
                                         <Pencil className="w-4 h-4 mr-2" />
-                                        Deletar curso
+                                        Deletar
                                     </Button>
                                 </div>
                             </>

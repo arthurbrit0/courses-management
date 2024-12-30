@@ -107,7 +107,7 @@ declare global {
     content: string;
     video?: string | File;
     freePreview?: boolean;
-    type: "Text" | "Quiz" | "Video";
+    type: "Texto" | "Quiz" | "Video";
   }
 
   interface ChapterProgress {
