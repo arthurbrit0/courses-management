@@ -5,6 +5,7 @@ import Providers from "./providers";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ptBR } from "@clerk/localizations";
 import { Toaster } from "sonner";
+import { Suspense } from "react";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -29,9 +30,11 @@ export default function RootLayout({
           className={`${dmSans.className}`}
         >
           <Providers>
-            <div className="mx-auto w-full h-full justify-center items-center">
-              {children}
-            </div>
+            <Suspense fallback={null}>
+              <div className="mx-auto w-full h-full justify-center items-center">
+                {children}
+              </div>
+            </Suspense>
             <Toaster richColors closeButton />
           </Providers>
         </body>

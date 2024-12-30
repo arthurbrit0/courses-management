@@ -17,7 +17,11 @@ export const useCheckoutNavigation = () => {
       const newStep = Math.min(Math.max(1,step), 3);                                    // A constante newStep é definida como o valor de step, limitado entre 1 e 3
       const showSignUp = isSignedIn ? "true" : "false";                                 // Se o usuário estiver lgoado, showSignUp é true
 
-      router.push(`/checkout?id=${courseId}&step=${newStep}&showSignUp=${showSignUp}`)  // A função push do router é chamada com a URL de checkout, passando os parâmetros courseId, newStep e showSignUp
+      router.push(`/checkout?id=${courseId}&step=${newStep}&showSignUp=${showSignUp}`,
+        {
+          scroll: false
+        }
+      )                                                                                 // A função push do router é chamada com a URL de checkout, passando os parâmetros courseId, newStep e showSignUp
     },
     [courseId, isSignedIn, router]                                                      // courseId, isSignedIn e router são passados como dependências (a função só é recriada se as dependências mudarem)
   )

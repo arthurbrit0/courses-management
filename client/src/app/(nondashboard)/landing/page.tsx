@@ -46,7 +46,9 @@ const Landing = () => {
   const router = useRouter();
 
   const handleCourseClick = (courseId: string) => {
-    router.push(`/search?id=${courseId}`);
+    router.push(`/search?id=${courseId}`, {
+        scroll: false,
+    });
   };
 
   const { data: courses, isLoading, isError } = useGetCoursesQuery({})
@@ -78,7 +80,7 @@ const Landing = () => {
                     Os melhores cursos para você aprender o que quiser.
                 </p>
                 <div className="w-fit">
-                    <Link href="/search">
+                    <Link href="/search" scroll={false}>
                         <div className="bg-primary-700 hover:bg-primary-600 px-4 py-2 rounded-md">Procurar por cursos</div>
                     </Link>
                 </div>

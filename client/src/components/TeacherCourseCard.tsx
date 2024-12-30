@@ -51,12 +51,12 @@ const TeacherCourseCard = ({
                         </p>
                     )}
                     </div>
-                    <div className="w-full flex gap-2 mt-3">
+                    <div className="w-full flex gap-2 mt-3 space-y-2 xl:space-y-0">
                         {isOwner ? (
                             <>
                                 <div>
                                     <Button
-                                        variant="outline"
+
                                         className="rounded w-full bg-primary-700 border-none hover:bg-primary-600 hover:text-customgreys-primarybg text-white-100 cursor-pointer"
                                         onClick={() => onEdit(course)}
                                     >
@@ -66,7 +66,7 @@ const TeacherCourseCard = ({
                                 </div>
                                 <div>
                                     <Button
-                                        variant="outline"
+
                                         className="rounded w-full bg-red-600 text-white-100 hover:bg-red-400 hover:text-customgreys-primarybg cursor-pointer"
                                         onClick={() => onDelete(course)}
                                     >

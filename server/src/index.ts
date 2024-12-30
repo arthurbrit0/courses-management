@@ -6,6 +6,8 @@ import helmet from "helmet";
 import morgan from "morgan";
 import * as dynamoose from "dynamoose";
 import { clerkMiddleware, createClerkClient, requireAuth } from "@clerk/express";
+import serverless from "serverless-http";
+import seed from "./seed/seedDynamodb";
 
 /* Importação de rotas */
 
@@ -56,4 +58,17 @@ if (!isProduction) {
     app.listen(port, () => {
         console.log(`Servidor rodando na porta ${port}`);
     })
+}
+
+/* AWS */
+
+const serverlessApp = serverless(app);
+export const handler = async (event: any, context: any) => {
+    if (event.action === "seed") {
+        await seed();
+        return {
+            statusCode: 200,
+            body: JSON.stringify({ message: "Seed realizado com sucesso!" }) // arrumar segurança
+        }
+    }
 }

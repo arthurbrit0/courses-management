@@ -33,11 +33,15 @@ const Search = () => {
 
   const handleCourseSelect = (course: Course) => {
     setSelectedCourse(course);                                                      // seta o curso selecionado
-    router.push(`/search?id=${course.courseId}`);                                   // navega para a página do curso selecionado
+    router.push(`/search?id=${course.courseId}`, {
+        scroll: false
+    });                                   // navega para a página do curso selecionado
   }
 
   const handleEnrollNow = (courseId: string) => {
-    router.push(`/checkout?step=1&id=${courseId}&showSignUp=false`)
+    router.push(`/checkout?step=1&id=${courseId}&showSignUp=false`, {
+        scroll: false
+    })
   }
  
   return (

@@ -8,6 +8,7 @@ const Footer = () => {
         <div className="mt-2">
             {["Sobre", "Privacidade", "Termos", "Contato"].map((item) => (
                 <Link 
+                    scroll={false}
                     key={item} 
                     href={`/${item.toLowerCase().replace(" ", "-")}`}
                     className="text-primary-300 mx-2 hover:text-primary-500 transition-all duration-150"

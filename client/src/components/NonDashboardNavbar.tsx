@@ -15,12 +15,13 @@ const NonDashboardNavbar = () => {
     <nav className="w-full flex justify-center bg-customgreys-primarybg">
         <div className="flex justify-between items-center w-3/4 py-8">
             <div className="flex justify-between items-center gap-14">
-                <Link href="/" className="font-bold text-lg sm:text-xl hover:text-customgreys-dirtyGrey transition-all duration-150">
+                <Link scroll={false} href="/" className="font-bold text-lg sm:text-xl hover:text-customgreys-dirtyGrey transition-all duration-150">
                     BLU.edu
                 </Link>
                 <div className="flex items-center gap-4">
                     <div className="relative group">
                         <Link 
+                            scroll={false}
                             href="/search" 
                             className="bg-customgreys-secondarybg pl-10 sm:pl-14 pr-6 sm:pr-20 py-3 sm:py-4 rounded-xl text-customgreys-dirtyGrey hover:text-white-50 hover:bg-customgreys-darkerGrey transition-all duration-300 text-sm sm:text-base">
                                 <span className="hidden sm:inline">
@@ -60,10 +61,10 @@ const NonDashboardNavbar = () => {
                     />
                 </SignedIn>
                 <SignedOut>
-                    <Link href="/signin" className="bg-customgreys-secondarybg px-4 py-2 rounded-md text-customgreys-dirtyGrey hover:text-white-50 hover:bg-customgreys-darkerGrey transition-all duration-300 text-sm sm:text-base">
+                    <Link scroll={false} href="/signin" className="bg-customgreys-secondarybg px-4 py-2 rounded-md text-customgreys-dirtyGrey hover:text-white-50 hover:bg-customgreys-darkerGrey transition-all duration-300 text-sm sm:text-base">
                         Entrar
                     </Link>
-                    <Link href="/signup" className="bg-primary-700 px-4 py-2 rounded-md text-white-50 hover:bg-primary-600 transition-all duration-300 text-sm sm:text-base">
+                    <Link scroll={false} href="/signup" className="bg-primary-700 px-4 py-2 rounded-md text-white-50 hover:bg-primary-600 transition-all duration-300 text-sm sm:text-base">
                         Registrar
                     </Link>
                 </SignedOut>

@@ -2,6 +2,9 @@ import { Request, Response } from 'express';
 import Course from '../models/courseModel';
 import { v4 as uuidv4 } from 'uuid';
 import { getAuth } from '@clerk/express';
+import AWS from "aws-sdk";
+
+const s3 = new AWS.S3();
 
 export const listCourses = async (                                    // Função para listar os cursos
     req: Request, 
@@ -204,5 +207,42 @@ export const deleteCourse = async (
             message: "Erro ao deletar o curso",
             error
         })
+    }
+}
+
+export const getUploadVideoUrl = async (
+    req: Request,
+    res: Response
+): Promise<void> => {
+    const { fileName, fileType } = req.body;
+
+    if(!fileName || !fileType) {
+        res.status(400).json({
+            message: "Nome do arquivo e tipo do arquivo são obrigatórios."
+        });
+        return;
+    }
+
+    try {
+        const uniqueId = uuidv4();
+        const s3Key = `videos/${uniqueId}/${fileName}`;
+
+        const s3Params = {
+            Bucket: process.env.AWS_BUCKET_NAME,
+            Key: s3Key,
+            ContentType: fileType,
+            Expires: 60,
+        }
+
+        const uploadUrl = s3.getSignedUrl("putObject", s3Params);
+        const videoUrl = `${process.env.CLOUDFRONT_DOMAIN}/${uniqueId}/${fileName}`;
+
+        res.json({
+            message: "URL de upload gerada com sucesso",
+            data: { uploadUrl, videoUrl }
+        })
+
+    } catch (error) {
+        
     }
 }

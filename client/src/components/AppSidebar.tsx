@@ -73,7 +73,7 @@ const AppSidebar = () => {
                                 "gap-4 p-8 hover:bg-customgreys-secondarybg group-data-[collapsible=icon]:flex group-data-[collapsible=icon]:justify-center",
                                 !isActive && "text-customgreys-dirtyGrey"
                             )}>
-                                <Link href={link.href} className="relative flex items-center">
+                                <Link href={link.href} className="relative flex items-center" scroll={false}>
                                     <link.icon className={isActive ? "text-white-50" : "text-gray-500"}/>
                                         <span className={cn(
                                             "font-medium text-md ml-4 group-data-[collapsible=icon]:hidden",

@@ -102,7 +102,7 @@ const ChapterModal = () => {
                 </button>
             </div>
             <Form {...methods}>
-                <form onSubmit={methods.handleSubmit(onSubmit)}>
+                <form onSubmit={methods.handleSubmit(onSubmit)} className="space-y-4">
                     <CustomFormField
                         name="title"
                         label="Título do capítulo"
@@ -124,17 +124,7 @@ const ChapterModal = () => {
                                     Vídeo do capítulo
                                 </FormLabel>
                                 <FormControl>
-                                    <>
-                                        {typeof value === "string" && value && (
-                                            <div className="mb-2 text-sm text-customgreys-dirtyGrey">
-                                                Vídeo atual: {value.split("/").pop()}   
-                                            </div>
-                                        )}
-                                        {value instanceof File && (
-                                            <div className="mb-2 text-sm text-customgreys-dirtyGrey">
-                                                Arquivo selecionado: {value.name}
-                                            </div>
-                                        )}
+                                    <div>
                                         <Input
                                             type="file"
                                             accept="video/*"
@@ -144,8 +134,18 @@ const ChapterModal = () => {
                                                     onChange(file)
                                                 }
                                             }}
-                                            className="border-none bg-customgreys-darkGrey p-4"/>
-                                    </>
+                                            className="border-none bg-customgreys-darkGrey p-4 py-2 cursor-pointer"/>
+                                            {typeof value === "string" && value && (
+                                                <div className="mb-2 text-sm text-customgreys-dirtyGrey">
+                                                    Vídeo atual: {value.split("/").pop()}   
+                                                </div>
+                                            )}
+                                            {value instanceof File && (
+                                                <div className="mb-2 text-sm text-customgreys-dirtyGrey">
+                                                    Arquivo selecionado: {value.name}
+                                                </div>
+                                            )}
+                                    </div>
                                 </FormControl>
                                 <FormMessage className="text-red-400" />
                             </FormItem>
